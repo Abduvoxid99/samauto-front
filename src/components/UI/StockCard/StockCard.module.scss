@@ -1,0 +1,76 @@
+@import "styles/unit.scss";
+
+.card{
+    width: 100%;
+    filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.02));
+    border-radius: rem(8);
+    background: var(--white-color);
+    overflow: hidden;
+
+    &__img{
+        max-width: 100%;
+        aspect-ratio: 136/83;
+        position: relative;
+    }
+
+    &__info{
+        padding: rem(24);
+
+        &__title{
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: rem(28);
+            letter-spacing: rem(-0.38);
+            color: var(--primary-color);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            margin-bottom: rem(8);
+        }
+
+        &__desc{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            font-size: rem(16);
+            line-height: rem(28);
+            letter-spacing: rem(-0.32);
+            color: var(--text-color);
+            margin-bottom: rem(24);
+        }
+
+        &__btn{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: rem(12);
+            border: none;
+            background: transparent;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s;
+
+            & > span{
+                font-size: rem(16);
+                line-height: rem(28);
+                letter-spacing: rem(-0.32);
+                color: var(--primary-color);
+                transition: all 0.3s;
+            }
+
+            & > svg{
+                transform: rotate(-90deg);
+            }
+
+            &:hover{
+                & > *{
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+}

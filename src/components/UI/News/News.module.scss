@@ -1,0 +1,39 @@
+@import "styles/unit.scss";
+
+.section{
+    width: 100%;
+    padding: rem(60) 0;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .section__title{
+            font-weight: 700;
+            font-size: rem(36);
+            line-height: rem(56);
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: rem(40);
+        }
+    
+        .section__cardList{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: rem(24);
+    
+            & > a{
+                max-width: calc(50% - rem(12));
+            }
+        }
+    
+        .section__btn{
+            margin-top: rem(52);
+            padding: rem(12) rem(52);
+            border-radius: rem(8);
+        }
+    }
+
+}

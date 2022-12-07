@@ -1,0 +1,75 @@
+@import "styles/unit.scss";
+
+.BodyCar {
+  padding: rem(40) 0;
+  background: var(--bg-color);
+  .title {
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: rem(56);
+    color: var(--primary-color);
+    margin-bottom: rem(60);
+  }
+  .bodyContainer {
+    display: flex;
+    flex-direction: column;
+    gap: rem(60);
+    .row,
+    .rowReverse {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: rem(10);
+      .firstCard,
+      .secondCard {
+        .description {
+          font-size: rem(16);
+          line-height: rem(28);
+          letter-spacing: -0.32px;
+          color: var(--primary-color);
+        }
+      }
+      .firstCard {
+        max-width: rem(560);
+        h3 {
+          font-weight: 700;
+          font-size: rem(20);
+          line-height: rem(28);
+          letter-spacing: -0.38px;
+          color: var(--primary-color);
+        }
+        .description {
+          margin-top: rem(16);
+          font-size: rem(16);
+          line-height: rem(28);
+          letter-spacing: -0.32px;
+          color: var(--primary-color);
+        }
+        .properties {
+          margin-top: rem(16);
+          display: flex;
+          flex-direction: column;
+          gap: rem(8);
+          p {
+            font-size: rem(16);
+            line-height: rem(28);
+            letter-spacing: -0.32px;
+            color: var(--secondary-color);
+          }
+        }
+      }
+      .secondCard {
+        max-width: rem(624);
+        .img {
+          border-radius: rem(12);
+          aspect-ratio: 624/404;
+          width: 100%;
+          min-width: rem(400);
+        }
+      }
+    }
+    .rowReverse {
+      flex-direction: row-reverse;
+    }
+  }
+}

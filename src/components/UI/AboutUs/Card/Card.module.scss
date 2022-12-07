@@ -1,0 +1,41 @@
+@import "styles/unit.scss";
+
+.card{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: rem(85);
+
+    &__img{
+        flex-grow: 1;
+        position: relative;
+        max-width: 49%;
+        width: 100%;
+        aspect-ratio: 156/101;
+        border-radius: rem(12);
+        overflow: hidden;
+    }
+    
+    &__info{
+        max-width: 45%;
+        &__title{
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: rem(28);
+            letter-spacing: rem(-0.38);
+            color: var(--primary-color);
+            margin-bottom: rem(16);
+        }
+
+        &__desc{
+            font-size: rem(18);
+            line-height: rem(30);
+            letter-spacing: rem(-0.32);
+            color: var(--dark-grey);
+        }
+    }
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}

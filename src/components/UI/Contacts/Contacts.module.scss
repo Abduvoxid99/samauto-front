@@ -1,0 +1,34 @@
+@import "styles/unit.scss";
+
+.section{
+    padding: rem(40) 0;
+    background: var(--bg-color);
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+    }
+
+    &__banner__text{
+        max-width: rem(620);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        padding-left: rem(84);
+
+        & > h2{
+            font-weight: 700;
+            font-size: rem(46);
+            line-height: rem(56);
+            color: var(--primary-color);
+        }
+
+        & > p{
+            font-size: rem(16);
+            line-height: rem(28);
+            letter-spacing: rem(-0.32);
+        }
+    }
+}

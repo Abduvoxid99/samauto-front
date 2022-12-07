@@ -1,0 +1,63 @@
+@import "styles/unit.scss";
+
+.Banner {
+  position: relative;
+  width: 100%;
+  .slideItem {
+    height: calc(100vh - rem(72));
+    .img {
+      height: 100%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  .sliderDots {
+    width: rem(40);
+    height: rem(2);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .controls {
+    &__dotsList {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+
+      & > li {
+        display: flex;
+        width: auto;
+        height: auto;
+        margin-left: 0;
+      }
+    }
+  }
+  .content {
+    width: rem(200);
+    position: absolute;
+    bottom: rem(82);
+    left: rem(84);
+    font-family: "Playfair Display";
+    color: var(--white-color);
+    h3 {
+      font-size: rem(40);
+      line-height: rem(44);
+    }
+    h2 {
+      margin-top: rem(13);
+      font-weight: 600;
+      font-size: rem(64);
+      line-height: rem(72);
+    }
+    .btn {
+      margin-top: rem(32);
+      border-radius: rem(8);
+    }
+  }
+}
+// responsive
+
+@media (max-width: 768px) {
+  .root {
+    position: relative;
+  }
+}

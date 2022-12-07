@@ -1,0 +1,11 @@
+@import "styles/unit.scss";
+
+.banner{
+    width: 100%;
+    aspect-ratio: 193/85;
+    position: relative!important;
+    border-radius: rem(12);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}

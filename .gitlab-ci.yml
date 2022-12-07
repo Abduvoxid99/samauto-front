@@ -1,0 +1,33 @@
+include:
+  - .gitlab/ci/*.gitlab-ci.yml
+
+stages:
+  - build
+  - deploy
+  - rollback
+
+build-image-staging:
+  stage: build
+  extends: .build_template
+  variables:
+    ENV_TAG: test
+  only:
+    - staging
+
+deploy-staging:
+  stage: deploy
+  extends: .deploy_template
+  variables:
+    NAMESPACE: samauto-test
+    VALUES_FILE: .helm/values-test.yml
+    K8SCONFIGJSON: $UCODE_KUBECONFIG
+  only:
+    - staging
+
+rollback-staging:
+  stage: rollback
+  extends: .rollback_template
+  variables:
+    NAMESPACE: samauto-test
+    K8SCONFIGJSON: $UCODE_KUBECONFIG
+  when: manual

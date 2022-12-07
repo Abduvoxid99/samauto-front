@@ -1,0 +1,37 @@
+@import "styles/unit.scss";
+
+.section{
+    width: 100%;
+    padding: rem(45) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title{
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: rem(56);
+        color: var(--black-color);
+        margin-bottom: rem(24);
+    }
+
+    &__btnList{
+        display: flex;
+        align-items: center;
+        gap: rem(22);
+    }
+
+    &__btn{
+        border-radius: rem(8);
+        cursor: pointer;
+    }
+
+    &__carousel{
+        width: 100%;
+        margin: rem(40) 0;
+    }
+}
+
+.btn__disabled{
+    background: transparent;
+}

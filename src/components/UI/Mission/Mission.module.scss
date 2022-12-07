@@ -1,0 +1,70 @@
+@import "styles/unit.scss";
+
+.section{
+    padding: rem(40) 0;
+    background: var(--bg-color);
+
+    &__banner{
+        width: 100%;
+        aspect-ratio: 193/85;
+        position: relative;
+        border-radius: rem(12);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__banner__text{
+        max-width: rem(456);
+        padding-left: rem(84);
+        z-index: 10;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        & > h2{
+            font-size: rem(46);
+            line-height: rem(56);
+            color: var(--white-color);
+        }
+
+        & > p {
+            font-size: rem(16);
+            line-height: rem(28);
+            letter-spacing: rem(-0.32);
+            color: var(--white-color);
+        }
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: rem(32);
+        line-height: rem(44);
+        letter-spacing: rem(-0.33);
+        color: var(--primary-color);
+    }
+
+    &__subtitle{
+        font-size: rem(24);
+        line-height: rem(32);
+        letter-spacing: rem(-0.33);
+        color: var(--black-color);
+    }
+    
+    &__text{
+        font-size: rem(18);
+        line-height: rem(32);
+        letter-spacing: rem(-0.32);
+        color: var(--dark-grey);
+    }
+
+    &__textwrapper{
+        max-width: rem(880)!important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+    }
+}

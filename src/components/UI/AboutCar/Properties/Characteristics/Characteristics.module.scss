@@ -1,0 +1,24 @@
+@import "styles/unit.scss";
+
+.Characteristics {
+  display: flex;
+  flex-direction: column;
+  .card {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    padding: rem(25) 0;
+    border-bottom: 1px solid #e4e3e4;
+    .left,
+    .right {
+      color: var(--secondary-color);
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: rem(24);
+    }
+    .right {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "styles/unit.scss";
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    &__title{
+        font-weight: 500;
+        line-height: rem(24);
+        letter-spacing: rem(0.38);
+        color: var(--grey-color);
+    }
+
+    &__list{
+        display: flex;
+        gap: rem(16)!important;
+    }
+
+    &__link{
+        font-weight: 500;
+        line-height: rem(24);
+        letter-spacing: rem(-0.32);
+        transition: all 0.3s;
+        cursor: pointer;
+        
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

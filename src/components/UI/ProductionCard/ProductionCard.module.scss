@@ -1,0 +1,220 @@
+@import "styles/unit.scss";
+
+.card {
+    width: 100%;
+    margin: 0;
+    padding: rem(24);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.02);
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgb(255, 255, 255);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 0px 10px rgb(255, 255, 255);
+    border-radius: rem(8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s;
+
+    &__info {
+        padding-top: rem(20);
+    }
+
+    &__imgWrapper {
+        width: 100%;
+        aspect-ratio: 127/79;
+        margin: rem(45) 0 rem(43) 0;
+        position: relative;
+    }
+
+    &__title {
+        position: relative;
+        z-index: inherit;
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: rem(24);
+        letter-spacing: rem(-0.32);
+        color: var(--primary-color);
+        margin-bottom: rem(4);
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: inherit;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(28);
+        letter-spacing: rem(-0.32);
+        color: var(--text-color);
+    }
+
+    &::before {
+        content: '';
+        width: 101%;
+        height: 101%;
+        position: absolute;
+        top: -0.5%;
+        left: -0.5%;
+        z-index: 0;
+        background: rgba(255, 255, 255, 1);
+        transition: all 0.5s;
+    }
+}
+
+.wrapper {
+    padding: rem(24);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    &__info > * {
+        color: var(--white-color);
+    }
+
+    &__info {
+        animation: show 0.7s ease 0.2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    &__btnList {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        animation: show 0.6s ease 0.4s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    &__btn {
+        background: transparent;
+        padding: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &>span {
+            font-weight: 600;
+            font-size: rem(16);
+            line-height: rem(24);
+            letter-spacing: rem(-0.32);
+            color: var(--white-color);
+        }
+
+        & > svg{
+            color: white;
+        }
+    }
+}
+
+.hoverWithoutImage {
+    .hover__elem {
+        height: 0;
+        opacity: 0;
+    }
+    .hover__btn{
+        position: relative;
+        z-index: 10;
+        height: 0;
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        & > span{
+            color: var(--black-color)!important;
+            font-weight: 600;
+            font-size: rem(16);
+            line-height: rem(24);
+        }
+
+        & > svg{
+            color: var(--main-color);
+        }
+    }
+    
+    &:hover{
+        .hover__elem{
+            height: auto;
+            opacity: 1;
+            animation: show 0.6s ease;
+            animation-fill-mode: forwards;
+        }
+
+        .hover__btn{
+            height: auto;
+            display: flex;
+        }
+        
+        .card__info{
+            margin-top: auto;
+            padding-top: 0;
+        }
+        .card__imgWrapper{
+            margin-top: 0;
+        }
+
+        .card__info > h4, .card__info > h5{
+            display: none;
+        }
+    }
+}
+
+.hoverWithImage {
+    &:hover {
+        transform: scale(1.1);
+        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0);
+        -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0);
+        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0);
+
+        .card {
+            &__imgWrapper,
+            &__info {
+                opacity: 0;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+        }
+    }
+
+    &:hover::before {
+        opacity: 0;
+    }
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: rem(1);
+    background: var(--stroke-color);
+    opacity: 0.24;
+}
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

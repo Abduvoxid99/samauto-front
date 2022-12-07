@@ -1,0 +1,59 @@
+@import "styles/unit.scss";
+
+.AboutCar {
+  .breadCrumb {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: rem(28);
+      letter-spacing: -0.32px;
+      color: var(--primary-color);
+    }
+    .lastText {
+      color: var(--secondary-color);
+    }
+  }
+  .title {
+    margin-top: rem(16);
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: rem(56);
+    color: var(--primary-color);
+  }
+  .row {
+    background: var(--bg-color);
+    padding: rem(40) 0;
+    margin-top: rem(32);
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(40);
+      .card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .description {
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: -0.32px;
+          color: var(--primary-color);
+        }
+        .buttons {
+          display: flex;
+          gap: rem(24);
+        }
+        .image {
+          max-width: rem(540);
+          align-self: flex-end;
+          img {
+            border-radius: rem(12);
+            width: 100%;
+            aspect-ratio: 540/401;
+          }
+        }
+      }
+    }
+  }
+}

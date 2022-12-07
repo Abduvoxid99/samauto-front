@@ -1,0 +1,19 @@
+@import "styles/unit.scss";
+
+.accordion__summary{
+    // font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: rem(24);
+    letter-spacing: rem(-0.32);
+    color: var(--black-color);
+}
+
+.accordion__details{
+    // font-family: 'Open Sans';
+    max-width: 804px;    
+    font-size: rem(16);
+    line-height: rem(28);
+    letter-spacing: rem(-0.32);
+    color: var(--text-color);
+}

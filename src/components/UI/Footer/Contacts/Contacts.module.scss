@@ -1,0 +1,39 @@
+@import "styles/unit.scss";
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    &__logo{
+        margin-bottom: rem(32);
+    }
+
+    &__phone, &__social {
+        line-height: rem(24);
+        letter-spacing: rem(-0.32);
+    }
+
+    &__phone{
+        margin-bottom: rem(32);
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    &__social{
+        font-weight: 500;
+        opacity: 0.5;
+    }
+
+    &__socialList{
+        display: flex;
+        align-items: center;
+        flex-direction: row!important;
+        gap: rem(34);
+        margin-top: rem(12);
+
+        & > li{
+            transition: all 0.35s;
+            cursor: pointer;
+        }
+    }
+}

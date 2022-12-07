@@ -1,0 +1,30 @@
+@import "styles/unit.scss";
+
+.root {
+  .box {
+    padding: rem(40) 0 rem(56);
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    .formWrapper {
+      width: rem(480);
+      h3 {
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: rem(56);
+        text-align: center;
+      }
+      .form {
+        margin-top: rem(40);
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+        .input {
+          input {
+            padding: rem(10) !important;
+          }
+        }
+      }
+    }
+  }
+}

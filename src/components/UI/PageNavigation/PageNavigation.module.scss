@@ -1,0 +1,21 @@
+@import "styles/unit.scss";
+
+.page{
+    &__breadcrumb{
+        padding: rem(16) 0;
+    }
+    
+    &__title{
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: rem(56);
+        color: var(--primary-color);
+    }
+}
+
+.page__textwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(32);
+}

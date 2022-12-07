@@ -1,0 +1,40 @@
+@import "styles/unit.scss";
+
+.dialog {
+  position: relative;
+  max-width: rem(600);
+  padding: rem(56) rem(40) rem(40) rem(40);
+  text-align: center;
+  .close {
+    position: absolute;
+    right: rem(40);
+    top: rem(32);
+    width: rem(20);
+    height: rem(20);
+    cursor: pointer;
+    svg path {
+      fill: #80868b;
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h3 {
+      margin-top: rem(24);
+      margin-bottom: rem(16);
+      font-weight: 700;
+      font-size: rem(32);
+      line-height: rem(46);
+      letter-spacing: -0.33px;
+      color: #1a2024;
+    }
+    p {
+      text-transform: lowercase;
+      color: var(--text-color);
+      font-size: rem(16);
+      line-height: rem(24);
+    }
+  }
+}

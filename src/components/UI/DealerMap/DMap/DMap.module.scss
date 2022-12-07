@@ -1,0 +1,96 @@
+@import "styles/unit.scss";
+
+.root {
+  h2 {
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: rem(56);
+    text-align: center;
+    color: #1b1c22;
+  }
+  .container {
+    .map {
+      position: relative;
+      margin-top: rem(40);
+      border-radius: 8px;
+      overflow: hidden;
+      height: rem(636);
+      width: 100%;
+      .dealers {
+        overflow: hidden;
+        box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.07);
+        border-radius: rem(8);
+        position: absolute;
+        background-color: #ffffff;
+        top: rem(40);
+        left: rem(40);
+        height: calc(100% - rem(80));
+        width: rem(491);
+        padding: rem(16);
+        .inputBox {
+          margin-top: rem(12);
+          width: 100%;
+          position: relative;
+          .input {
+            width: 100%;
+            padding: rem(12) rem(16);
+            border-radius: rem(10);
+            font-size: rem(15);
+            line-height: rem(24);
+            height: rem(48);
+            color: #252c32;
+            border: 1px solid #e4e3e4;
+            transition: all 0.25s ease-in-out;
+            &:focus {
+              outline: none;
+              border-color: var(--main-color) !important;
+            }
+          }
+          .endAdorment {
+            right: rem(13);
+            top: calc(50% - rem(10));
+            position: absolute;
+          }
+        }
+        .dealersList {
+          margin-top: 15px;
+          padding-bottom: 100px;
+          height: 100%;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .dealerItem {
+            cursor: pointer;
+            padding: rem(24) 0;
+            border-bottom: 1px solid #e4e3e4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:first-child {
+              padding-top: rem(12);
+            }
+            h3 {
+              font-weight: 600;
+              font-size: rem(18);
+              line-height: rem(24);
+              letter-spacing: -0.32px;
+            }
+            .phone {
+              font-weight: 500;
+              font-size: rem(16);
+              line-height: rem(24);
+              letter-spacing: -0.32px;
+            }
+            .address {
+              font-size: rem(16);
+              line-height: rem(28);
+              letter-spacing: -0.32px;
+              color: #80868b;
+            }
+          }
+        }
+      }
+    }
+  }
+}
